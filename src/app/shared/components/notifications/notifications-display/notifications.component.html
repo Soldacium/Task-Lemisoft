@@ -1,0 +1,10 @@
+<div class="notifications">
+  <app-notification
+    *ngFor="let notification of displayedNotifications"
+    [title]="notification.title"
+    [elementId]="notification.id"
+    [message]="notification.message"
+    [type]="notification.type"
+    (onClose)="removeNotification(notification.id)"
+  ></app-notification>
+</div>

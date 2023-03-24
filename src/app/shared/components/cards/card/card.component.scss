@@ -1,0 +1,25 @@
+.card {
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .card-headers {
+    display: flex;
+    .card-title {
+      font-size: 2em;
+      font-weight: 600;
+      padding-bottom: 32px;
+    }
+    .card-subtitle {
+      margin-left: auto;
+    }
+  }
+
+  .card-footer {
+    margin-left: auto;
+  }
+}

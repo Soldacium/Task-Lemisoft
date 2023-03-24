@@ -1,0 +1,47 @@
+<app-dialog [isOpen]="isOpen">
+  <app-card>
+    <div card-title>Dodawanie żartu</div>
+    <form class="add-joke-form" card-content [formGroup]="jokeForm">
+      <select
+        styled-input
+        name="category"
+        id="category"
+        formControlName="categoryId"
+        required
+      >
+        <option value="" disabled selected>Wybierz kategorię</option>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+
+      <textarea
+        styled-input
+        name=""
+        id=""
+        rows="10"
+        cols="30"
+        formControlName="joke"
+        placeholder="Wprowadź treść żartu"
+        required
+      ></textarea>
+    </form>
+    <div card-footer>
+      <button
+        styled-button
+        color="white"
+        (click)="closeAddDialog($event)"
+        [style.margin-right]="'1em'"
+      >
+        Anuluj
+      </button>
+      <button
+        styled-button
+        [disabled]="!jokeForm.valid"
+        (click)="addJoke($event)"
+      >
+        Dodaj
+      </button>
+    </div>
+  </app-card>
+</app-dialog>

@@ -1,0 +1,16 @@
+<div class="card" [style.min-height]="minHeight + 'px'">
+  <div class="card-headers">
+    <div class="card-title">
+      <ng-content select="[card-title]"></ng-content>
+    </div>
+    <div class="card-subtitle">
+      <ng-content select="[card-subtitle]"></ng-content>
+    </div>
+  </div>
+  <div class="card-content">
+    <ng-content select="[card-content]"></ng-content>
+  </div>
+  <div class="card-footer">
+    <ng-content select="[card-footer]"></ng-content>
+  </div>
+</div>

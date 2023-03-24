@@ -1,0 +1,20 @@
+.joke-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+
+  .joke-card {
+    min-height: 350px;
+  }
+  > * {
+    margin-bottom: 1em;
+  }
+
+  button:nth-of-type(1) {
+    margin-right: auto;
+  }
+
+  button:nth-of-type(2) {
+    margin-left: auto;
+  }
+}

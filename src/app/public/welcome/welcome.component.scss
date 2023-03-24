@@ -1,0 +1,41 @@
+.welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 400px;
+    transition: 1s;
+
+    animation: DropShadowAnimation 4s infinite alternate-reverse ease;
+  }
+
+  .buttons {
+    display: flex;
+
+    > * {
+      margin: 0 0.5em;
+    }
+  }
+}
+
+@keyframes DropShadowAnimation {
+  0% {
+    filter: drop-shadow(0px 0px 20px var(--color-yellow));
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 100px var(--color-yellow));
+    transform: rotate(-10deg);
+  }
+}

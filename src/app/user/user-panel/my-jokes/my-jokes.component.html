@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <button styled-button (click)="openAddDialog()">Dodaj</button>
+  <app-card
+    *ngIf="myJokes.length === 0"
+    [style]="'margin-top: 1em; display: block;'"
+  >
+    <div card-title>Na razie pusto!</div>
+    <div card-content>
+      Ale łatwo to da się rozwiązać <br />
+      <b>Kliknij w przycisk u góry</b> i dodaj swój pierwszy żart <br /><br />
+
+      <span [style.color]="'var(--color-yellow)'"
+        >Do <b>szczęścia</b> jeden krok</span
+      >
+    </div>
+  </app-card>
+  <div class="jokes">
+    <div class="jokes-column left">
+      <app-card-joke
+        *ngFor="let joke of leftColumnJokes"
+        [joke]="joke"
+        [isDeletable]="true"
+      >
+      </app-card-joke>
+    </div>
+    <div class="jokes-column right">
+      <app-card-joke
+        *ngFor="let joke of rightColumnJokes"
+        [joke]="joke"
+        [isDeletable]="true"
+      >
+      </app-card-joke>
+    </div>
+  </div>
+</div>
+<app-dialog-add-joke
+  [isOpen]="isAddDialogOpen"
+  (onClose)="isAddDialogOpen = false"
+></app-dialog-add-joke>

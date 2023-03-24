@@ -1,0 +1,23 @@
+<app-card [min-height]="minHeight" *ngIf="joke !== undefined">
+  <div card-subtitle>
+    kategoria: <b>{{ getCategoryName(joke.category) }}</b>
+  </div>
+  <div card-content>{{ joke.content }}</div>
+  <div card-footer *ngIf="isDeletable" [style.margin-top]="'1em'">
+    <button styled-button color="danger" (click)="openDeleteDialog()">
+      Usuń
+    </button>
+  </div>
+</app-card>
+<app-dialog [isOpen]="isDeleteDialogOpen">
+  <app-card>
+    <div card-title>Potwierdzenie</div>
+    <div card-content>Czy na pewno chcesz usunąć wybrany żart?</div>
+    <div card-footer>
+      <button styled-button color="white" (click)="closeDeleteDialog()">
+        Nie
+      </button>
+      <button styled-button (click)="deleteJoke()">Tak</button>
+    </div>
+  </app-card>
+</app-dialog>

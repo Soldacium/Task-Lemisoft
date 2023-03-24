@@ -1,0 +1,14 @@
+<div class="joke-wrapper">
+  <button styled-button (click)="isAddDialogOpen = true">Dodaj</button>
+  <app-card-joke
+    [min-height]="350"
+    class="joke-card"
+    *ngIf="joke"
+    [joke]="joke"
+  ></app-card-joke>
+  <button styled-button (click)="getNextJoke()">Następny żart</button>
+</div>
+<app-dialog-add-joke
+  [isOpen]="isAddDialogOpen"
+  (onClose)="isAddDialogOpen = false"
+></app-dialog-add-joke>

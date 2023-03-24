@@ -1,0 +1,13 @@
+<div class="notification" [ngClass]="type" [id]="id">
+  <button (click)="closeNotification($event)">
+    <img src="assets/icons/x.svg" alt="" />
+  </button>
+  <div class="notification-title">
+    <b>
+      {{ title }}
+    </b>
+  </div>
+  <div>
+    {{ message }}
+  </div>
+</div>

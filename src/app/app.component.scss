@@ -1,0 +1,19 @@
+.router-wrapper {
+  padding: calc(70px + 3vw) 20%;
+}
+
+.loading {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+}
+
+.active {
+  color: var(--color-yellow) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .router-wrapper {
+    padding: calc(70px + 3vw) 5%;
+  }
+}

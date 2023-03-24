@@ -1,0 +1,46 @@
+.notification {
+  position: relative;
+  right: 0;
+  margin-bottom: 1em;
+  min-width: 470px;
+  min-height: 100px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-medium);
+
+  &.success {
+    color: var(--color-white);
+    background-color: var(--color-green);
+  }
+
+  &.error {
+    color: var(--color-white);
+    background-color: var(--color-red);
+  }
+
+  &.warning {
+    color: var(--color-white);
+    background-color: var(--color-yellow);
+  }
+
+  .notification-title {
+    margin-bottom: 1em;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .notification {
+    min-width: 300px;
+  }
+}
