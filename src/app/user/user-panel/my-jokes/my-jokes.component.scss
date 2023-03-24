@@ -1,6 +1,7 @@
 .jokes {
   display: flex;
   flex-wrap: wrap;
+  gap: 1em;
   .jokes-column {
     flex: 1 1 20em;
     display: flex;
@@ -8,8 +9,6 @@
 
     > * {
       margin-top: 1em;
-      margin-left: 0.5em;
-      margin-right: 0.5em;
     }
   }
 }
